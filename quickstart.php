@@ -11,7 +11,9 @@ if (php_sapi_name() != 'cli') {
  */
 function getClient()
 {
+
     $client = new Google_Client();
+
     $client->setApplicationName('Google Sheets API PHP Quickstart');
     $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
     $client->setAuthConfig('credentials.json');

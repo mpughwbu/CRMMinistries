@@ -354,6 +354,7 @@ class CurlFactory implements CurlFactoryInterface
                 $conf[\CURLOPT_SSL_VERIFYHOST] = 0;
                 $conf[\CURLOPT_SSL_VERIFYPEER] = false;
             } else {
+                //VERIFY LOCAL HOST EDIT
                 $conf[\CURLOPT_SSL_VERIFYHOST] = 0;
                 $conf[\CURLOPT_SSL_VERIFYPEER] = false;
                 if (\is_string($options['verify'])) {
