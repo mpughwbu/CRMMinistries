@@ -356,8 +356,8 @@ class CurlFactory implements CurlFactoryInterface
             } else {
                 //VERIFY LOCAL HOST EDIT
 
-                $conf[\CURLOPT_SSL_VERIFYHOST] = 0; // @todo Revert back to "2" for deployment
-                $conf[\CURLOPT_SSL_VERIFYPEER] = false; // @todo Revert back to "true" for deployment
+                $conf[\CURLOPT_SSL_VERIFYHOST] = 0;     // @TODO Revert back to "2" for deployment
+                $conf[\CURLOPT_SSL_VERIFYPEER] = false;     // @TODO Revert back to "true" for deployment
                 if (\is_string($options['verify'])) {
                     // Throw an error if the file/folder/link path is not valid or doesn't exist.
                     if (!\file_exists($options['verify'])) {
