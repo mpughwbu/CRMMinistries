@@ -12,6 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 
+
 </head>
 <body>
 <header>
@@ -73,24 +74,29 @@
 
                     $contact_address = $contact_json["street_address"].", ".$contact_json["city"].", ".$contact_json["state_province_name"].", ".$contact_json["postal_code"];
                     $contact = array(
-                        "#dummy note#", //NOTE
-                        "#ABC Church#", //POOL
-                        "#Joe Pullis#", //KEY LEADER
-                        "#A#", //RANK
-                        "#World Christian#", //STATUS
-                        $contact_json["custom_422"], //LAST CONTACT DATE
-                        "#joe@foo.com#", //EMAIL
-                        $contact_json["phone"], //PHONE
-                        $contact_address, //ADDRESS
-                        "#Manny Martinez#", //CMM LEAD
+                        "note" => "#dummy note#", //NOTE
+                        "pool" =>"#ABC Church#", //POOL
+                        "keylead" => "#Joe Pullis#", //KEY LEADER
+                        "rank" => "#A#", //RANK
+                        "status" => "#World Christian#", //STATUS
+                        "lastdate" => $contact_json["custom_422"], //LAST CONTACT DATE
+                        "email" => "#joe@foo.com#", //EMAIL
+                        "phone" => $contact_json["phone"], //PHONE
+                        "address" => $contact_address, //ADDRESS
+                        "cmmlead" => "#Manny Martinez#", //CMM LEAD
                     );
                 }
                 else {
 
                     echo "Not found.";
                 }
-                foreach ($contact as $value){
-                    echo "<td>$value</td>";
+                foreach ($contact as $key => $value){
+                    if ($key == "note"){
+                        echo "<td class='note' value='1' onmouseenter=onEnter(this) onmouseleave='onLeave(this)' ondblclick='doubleClick(this);'> $value </td>";
+                    }
+                    else {
+                        echo "<td onmouseenter='onEnter(this)' onmouseleave='onLeave(this)'> $value </td>";
+                    }
                 }
                 ?>
             </table>
@@ -98,6 +104,6 @@
 
     </div>
 </header>
-
+<script type="text/javascript" src="js/report.js"></script>
 </body>
 </html>
