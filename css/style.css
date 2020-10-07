@@ -1,4 +1,85 @@
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  cursor: default;
+}
+
+body {
+  width: 80%;
+  margin: auto;
+  font-family: Roboto, sans-serif;
+}
+
+.box {
+  text-align: center;
+  display: inline-block;
+  /*border: 1px solid rgba(53, 53, 53, 0.3);*/
+}
+
+.container {
+  position: relative;
+  display: block;
+  /*border: 1px solid rgb(176, 0, 0);*/
+}
+
+.content {
+  z-index: 0;
+  min-width: 100%;
+  width: fit-content;
+  /*border: 1px solid rgb(5, 119, 1);*/
+}
+
+.sort{
+  padding: 1em;
+  float: left;
+}
+
+.login{
+  z-index: 9;
+  padding: 1em 2em 1em 1em;
+  float: right;
+}
+
+.login a{
+  text-decoration: none;
+  padding: 0.5em;
+}
+
+.login a:hover {
+  background-color: rgb(156, 248, 235);
+}
+
+#report {
+  text-align: left;
+  width: auto;
+  margin: auto;
+
+}
+
+#report tr,
+#report td{
+  text-align: center;
+  padding: 0.5em;
+}
+
+#report td:hover {
+  background-color: rgb(156, 248, 235);
+}
+
+#report th{
+  font-size: 0.9em;
+  padding: 0.5em;
+}
+
+.select {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  padding: 0.3em;
+}
+
+
+
+.spacer {
+  height: 2em;
 }
