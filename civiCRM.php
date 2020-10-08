@@ -12,7 +12,7 @@
   // Worker method to make a CiviCRM API call
   function civicrm_api( $entity, $action, $jsondata )
   {
-    require 'C:/Sites/civi_api_key.php'; // @todo Be sure to update this path. It is different on production and localdev
+    require 'c:\Sites\civi_api_key.php'; // @todo Be sure to update this path. It is different on production and localdev
 
     $service_url = 'http://staging.mobilization.org/sites/all/modules/civicrm/extern/rest.php';
     $curl = curl_init($service_url);
