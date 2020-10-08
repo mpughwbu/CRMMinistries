@@ -14,8 +14,6 @@
 
 <?php 
 
-
-
 // Read the Tracker data from the Antarctica Team Tracker Google Sheet here. This gives you a list of contacts.
 //$contact_list = get_contacts_from_googlesheet(); // you'll need to write some type of function like this perhaps
 
